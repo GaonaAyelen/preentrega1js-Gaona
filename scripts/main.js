@@ -5,9 +5,12 @@
  }
   bienvenido()
 
+
+
 const servicios  = ["1 - Soldadura" , "2 - Fabricacion", "3 - Reparaciones" , "4 - Montajes industriales"]
 
 const Precios = [100, 200, 300, 400]
+
 
 
 function elegirServicio () {
@@ -18,32 +21,32 @@ function elegirServicio () {
           "3. Reparaciones\n" +
           "4. Montajes industriales");
 
-    // Solicitar al usuario que ingrese su eleccion
-    let opcion = alert("Ingresa el número correspondiente al servicio que desea solicitar:\n" +
+    /* Solicitar al usuario que ingrese su eleccion*/
+    let opcion = prompt("Ingresa el número correspondiente al servicio que desea solicitar:\n" +
         "1. Soldadura\n" +
         "2. Fabricacion\n" +
         "3. Reparaciones\n" +
         "4. Montajes industriales");
 
-    // Convertir la opción a un número entero
+    
     opcion = parseInt(opcion);
 
-    // Validar la opcion ingresada por el usuario
+     /*Validar la opcion ingresada por el usuario*/
     switch (opcion) {
         case 1:
-            alert("Has solicitado el servicio de soldadura.");
+            confirm("Has solicitado el servicio de soldadura.");
             break;
         case 2:
-            alert("Has solicitado el servicio de fabricacion.");
+            confirm("Has solicitado el servicio de fabricacion.");
             break;
         case 3:
-            alert("Has solicitado el servicio de reparaciones.");
+            confirm("Has solicitado el servicio de reparaciones.");
             break;
         case 4:
-            alert("Has solicitado el servicio de Montajes industriales.");
+            confirm("Has solicitado el servicio de Montajes industriales.");
             break;
         default:
-            alert("Opción no válida. Por favor, selecciona un número del 1 al 4.");
+            confirm("Opción no válida. Por favor, selecciona un número del 1 al 4.");
             
             elegirServicio();
             break;
@@ -51,5 +54,7 @@ function elegirServicio () {
 }
 
 elegirServicio();
+
+
 
 
