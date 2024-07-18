@@ -1,34 +1,25 @@
+let nombre = prompt("¿Como te llamas?");
 
+function bienvenidoCliente (nombre) {
 
-function bienvenido() {
-    let nombre = prompt("¿Como te llamas?")
-
-    alert("Hola " + nombre + " ¿Como estas?")
+    alert("Hola " + nombre + " ¿Como estas? Bienvenido a Global Metal!");
 }
-bienvenido()
-
+bienvenidoCliente(nombre);
 
 
 const servicios = ["1 - Soldadura", "2 - Fabricacion", "3 - Reparaciones", "4 - Montajes industriales"]
 
-const Precios = [100, 200, 300, 400]
+const precios = [100, 200, 300, 400]
 
 
 
 function elegirServicio() {
 
-    alert("Bienvenido a nuestra tienda, donde encontraras estos servicios..\n" +
-        "1. Soldadura\n" +
-        "2. Fabricacion\n" +
-        "3. Reparaciones\n" +
-        "4. Montajes industriales");
+     alert("Global Metal te ofrece estos servicios..\n" +
+        servicios.join("\n"));
 
-
-    let opcion = prompt("Ingresa el número correspondiente al servicio que desea solicitar:\n" +
-        "1. Soldadura\n" +
-        "2. Fabricacion\n" +
-        "3. Reparaciones\n" +
-        "4. Montajes industriales");
+ let opcion = prompt("Ingresa el número correspondiente al servicio que desea solicitar:\n" +
+            servicios.join("\n"));
 
 
     opcion = parseInt(opcion);
@@ -36,16 +27,16 @@ function elegirServicio() {
 
     switch (opcion) {
         case 1:
-            confirm("Has solicitado el servicio de soldadura.");
+            confirm("Has solicitado el servicio de soldadura," + "el precio es de " + precios[0] );
             break;
         case 2:
-            confirm("Has solicitado el servicio de fabricacion.");
+            confirm("Has solicitado el servicio de fabricacion," + "el precio es de " + precios[1]);
             break;
         case 3:
-            confirm("Has solicitado el servicio de reparaciones.");
+            confirm("Has solicitado el servicio de reparaciones," + "el precio es de " + precios[2]);
             break;
         case 4:
-            confirm("Has solicitado el servicio de Montajes industriales.");
+            confirm("Has solicitado el servicio de Montajes industriales," + "el precio es de " + precios[3]);
             break;
         default:
             confirm("Opción no válida. Por favor, selecciona un número del 1 al 4.");
